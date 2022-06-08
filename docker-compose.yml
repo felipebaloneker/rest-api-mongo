@@ -10,7 +10,18 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin
     ports:
       - 27017:27017
-    volumes:
-      - mongo_server:/data/db
     logging:
       driver: none
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "server"
+    restart: always
+    ports:
+      - 4000:4000
+    command: yarn runServer
+    depends_on:
+      - db
+volumes:
+  mongo_server:
