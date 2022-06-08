@@ -1,10 +1,8 @@
 import { Request, Response } from "express";
-import { User } from "../models/User";
 import controllerDB from "../database/databaseController";
 
 const controllerCode = {
     get: async (request: Request, response: Response) => {
-        const email = request.params.email
         try {
             const user = await controllerDB.get()
             return response.send({ user })
@@ -63,4 +61,4 @@ const controllerCode = {
 
 }
 
-export default controllerDB
+export default controllerCode

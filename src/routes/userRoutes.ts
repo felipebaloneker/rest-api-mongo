@@ -1,11 +1,11 @@
 import express from "express";
-import { create, erase, index, update } from "../controller/UserController";
+import controllerCode from "../controller/UserController";
 
 const router = express.Router()
 
-router.post('/', create)
-router.get('/', index)
-router.put('/:email', update)
-router.delete('/:email', erase)
+router.post('/', controllerCode.get)
+router.get('/', controllerCode.create)
+router.put('/:email', controllerCode.update)
+router.delete('/:email', controllerCode.delete)
 
 export default router
