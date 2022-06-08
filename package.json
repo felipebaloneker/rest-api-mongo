@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
-    "compile": "yarn tsc --build --force"
+    "compile": "yarn tsc --build --force",
+    "runServer": "node dist/server"
   },
   "dependencies": {
     "@types/express": "^4.17.13",
