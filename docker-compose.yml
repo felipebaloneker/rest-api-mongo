@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  mongo:
+  db:
     image: mongo
     container_name: "mongo"
     restart: always
@@ -10,3 +10,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin
     ports:
       - 27017:27017
+    volumes:
+      - mongo_server:/data/db
+    logging:
+      driver: none
