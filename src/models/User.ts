@@ -1,34 +1,34 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 export interface IUser {
-    name: string,
-    email: string,
-    password: string,
+    name: string;
+    email: string;
+    password: string;
 }
 
 const UserSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     email: {
         type: String,
-        required: true
+        required: true,
     },
     password: {
         type: String,
-        required: true
+        required: true,
     },
     created_at: {
         type: Date,
-        default: Date.now
+        default: Date.now,
     },
     updated_at: {
         type: Date,
-        default: Date.now
-    }
-})
+        default: Date.now,
+    },
+});
 
-const User = mongoose.model("User", UserSchema)
+const User = mongoose.model('User', UserSchema);
 
-export { User }
+export { User };

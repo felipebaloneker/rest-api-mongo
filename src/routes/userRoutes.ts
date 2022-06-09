@@ -1,11 +1,11 @@
-import express from "express";
-import controllerCode from "../controller/UserController";
+import express from 'express';
+import controllerCode from '../controller/UserController';
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/', controllerCode.get)
-router.get('/', controllerCode.create)
-router.put('/:email', controllerCode.update)
-router.delete('/:email', controllerCode.delete)
+router.post('/', controllerCode.get);
+router.get('/', controllerCode.create);
+router.put('/:email', controllerCode.update);
+router.delete('/:email', controllerCode.delete);
 
-export default router
+export default router;

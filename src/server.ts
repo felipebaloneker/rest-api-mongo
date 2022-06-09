@@ -1,14 +1,16 @@
-import 'dotenv/config'
-import express from 'express'
+import 'dotenv/config';
+import express from 'express';
 
-import router from "./routes/userRoutes"
-import './database/connection'
+import router from './routes/userRoutes';
+import './database/connection';
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
-const server = express()
+const server = express();
 
-server.use(express.json())
-server.use(router)
+server.use(express.json());
+server.use(router);
 
-server.listen(PORT, () => { console.log("server running") })
+server.listen(PORT, () => {
+    console.log('server running');
+});

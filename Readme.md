@@ -1,4 +1,5 @@
-####iniciar aplicação 
-``` bash
-docker-compose up --build --remove-orphans 
+####iniciar aplicação
+
+```bash
+docker-compose up --build --remove-orphans
 ```
